@@ -1,0 +1,54 @@
+$font-stack: Helvetica, Arial, sans-serif;
+$theme: 'dark';
+$dark: (
+    bg-1: #101010ff,
+    bg-2: #212121ff,
+    bg-3: #303030ff,
+    bg-4: #424242ff,
+    bg-5: #575757ff,
+    text-1: #ffffffff,
+    text-2: #ffffffc6,
+    text-3: #ffffff88, 
+    primary-1: #008eb7,
+    primary-2: #209cc0,
+    btn-1-hover: #424242ff,
+);
+
+@function t($key) {
+  @return map-get($dark, $key);
+}
+
+* {
+  box-sizing: border-box;
+  font-family: $font-stack;
+}
+
+label {
+  font-size: 1.2rem;
+  color: t('text-2');
+}
+
+input {
+  font-size: 1.2rem;
+  color: t('text-1');
+}
+
+h1 {
+  color: t('text-1');
+}
+
+h2 {
+  color: t('text-1');
+}
+
+button {
+  font-size: 1.2rem;
+  color: t(text-1);
+}
+
+// @media (prefers-color-scheme: dark) {
+//   @function t($key) {
+//     @return map-get(map-get($themes, 'dark'), $key)
+//   }
+
+// }
