@@ -16,10 +16,6 @@ Once fixed, Find a better way to mock the data/database
 
 Transfer information window popping up when a region is clicked from the old project
 
-Fix regions that don't colour properly
-
-Fix regions that aren't quite lined up in the SVG
-
 Add advanced search settings for more customised searches (e.g. mortgage parameters and freehold/leasehold)
 
 Think of a better name
