@@ -36,13 +36,20 @@
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.19.1",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^14.4.3",
     "@types/jest": "^29.0.3",
+    "babel-jest": "^29.1.2",
     "css-loader": "^6.7.1",
     "eslint": "^8.23.1",
     "eslint-plugin-jest": "^27.0.4",
+    "eslint-plugin-jest-dom": "^4.0.2",
     "eslint-plugin-react": "^7.31.8",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-testing-library": "^5.7.2",
     "jest": "^29.0.3",
+    "jest-environment-jsdom": "^29.1.2",
     "json-loader": "^0.5.7",
     "nodemon": "^2.0.20",
     "sass": "^1.55.0",
@@ -52,8 +59,25 @@
   },
   "babel": {
     "presets": [
-      "@babel/preset-react",
+      [
+        "@babel/preset-react",
+        {
+          "runtime": "automatic"
+        }
+      ],
       "@babel/preset-env"
+    ]
+  },
+  "jest": {
+    "modulePaths": [
+      "<rootDir>",
+      "<rootDir>/lib/"
+    ],
+    "moduleNameMapper": {
+      "^.+\\.(css|less|scss)$": "babel-jest"
+    },
+    "setupFilesAfterEnv": [
+      "<rootDir>/jest-setup.js"
     ]
   }
 }
