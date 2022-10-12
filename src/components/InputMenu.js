@@ -12,6 +12,10 @@ const InputMenu = (props) => {
     flat: true,
   });
   const [regionSize, setRegionSize] = useState("counties");
+  const [isValidInput, setIsValidInput] = useState({
+    income: "valid",
+    deposit: "valid",
+  });
 
   const toggleMenu = () => {
     setMenuVisible(!menuVisible);
@@ -20,10 +24,18 @@ const InputMenu = (props) => {
   const handleChange = (event) => {
     switch (event.target.name) {
       case "income":
-        setIncome(handleUserInput(event));
+        const newIncome = handleUserInput(event);
+        if (newIncome.length > 0) {
+          setIsValidInput({ ...isValidInput, income: "valid" });
+        }
+        setIncome(newIncome);
         break;
       case "deposit":
-        setDeposit(handleUserInput(event));
+        const newDeposit = handleUserInput(event);
+        if (newDeposit.length > 0) {
+          setIsValidInput({ ...isValidInput, deposit: "valid" });
+        }
+        setDeposit(newDeposit);
         break;
       case "propertyTypes":
         const propertyTypesValue = {};
@@ -47,6 +59,7 @@ const InputMenu = (props) => {
     }
   };
 
+  // TODO: fix issue causing cursor to jump to end of input when comma added or removed
   const handleUserInput = (event) => {
     // removes non-numeric chracters and any characters after a decimal
     const valueClean = event.target.value.replace(/\..*|[^\d]/g, "");
@@ -57,15 +70,46 @@ const InputMenu = (props) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    if (checkFormFields() === false) {
+      return;
+    }
+    // removes commas from the strings
     const incomeClean = income.replace(/\..*|[^\d]/g, "");
     const depositClean = deposit.replace(/\..*|[^\d]/g, "");
 
     props.handleSubmit({
-      income: incomeClean,
-      deposit: depositClean,
+      income: parseInt(incomeClean),
+      deposit: parseInt(depositClean),
       propertyTypes,
       regionSize,
     });
+  };
+
+  const checkFormFields = () => {
+    const incomeValid = income.length === 0 ? "invalid" : "valid";
+    const depositValid = deposit.length === 0 ? "invalid" : "valid";
+    if (incomeValid === "invalid" || depositValid === "invalid") {
+      setIsValidInput({ income: incomeValid, deposit: depositValid });
+      return false;
+    }
+    return true;
+  };
+
+  const renderErrorMessage = (field) => {
+    let message = "";
+    if (isValidInput[field] === "invalid") {
+      switch (field) {
+        case "income":
+          message = "Please enter an income";
+          break;
+        case "deposit":
+          message = "Please enter a deposit";
+          break;
+        default:
+          message = "Unknown input field";
+      }
+    }
+    return <div className="error-text">{message}</div>;
   };
 
   const renderForm = () => {
@@ -79,40 +123,49 @@ const InputMenu = (props) => {
                 Income
               </label>
               <div className="input-wrapper text-input-wrapper">
-                <div className="currency-symbol" aria-hidden="true">
-                  &#163;
+                <div
+                  className={isValidInput.income + " text-input"}
+                  id="incomeInputWrapper"
+                >
+                  <div className="currency-symbol" aria-hidden="true">
+                    &#163;
+                  </div>
+                  <input
+                    className="currency-text-input"
+                    id="incomeInput"
+                    onChange={handleChange}
+                    value={income}
+                    name="income"
+                    type="text"
+                    pattern="^\d+(,?\d{3})*(\d{3})*$"
+                  />
                 </div>
-                <input
-                  className="currency-text-input"
-                  id="incomeInput"
-                  onChange={handleChange}
-                  value={income}
-                  name="income"
-                  type="text"
-                  pattern="^\d+(,?\d{3})*(\d{3})*$"
-                />
+                {renderErrorMessage("income")}
               </div>
             </div>
             <div className="form-field">
               <label className="input-description" htmlFor="depositInput">
                 Deposit
               </label>
-              <div
-                className="input-wrapper text-input-wrapper"
-                id="depositInputWrapper"
-              >
-                <label className="currency-symbol" aria-hidden="true">
-                  &#163;
-                </label>
-                <input
-                  className="currency-text-input"
-                  id="depositInput"
-                  onChange={handleChange}
-                  value={deposit}
-                  name="deposit"
-                  type="text"
-                  pattern="^\d+(,?\d{3})*(\d{3})*$"
-                />
+              <div className="input-wrapper text-input-wrapper">
+                <div
+                  className={isValidInput.deposit + " text-input"}
+                  id="depositInputWrapper"
+                >
+                  <label className="currency-symbol" aria-hidden="true">
+                    &#163;
+                  </label>
+                  <input
+                    className="currency-text-input"
+                    id="depositInput"
+                    onChange={handleChange}
+                    value={deposit}
+                    name="deposit"
+                    type="text"
+                    pattern="^\d+(,?\d{3})*(\d{3})*$"
+                  />
+                </div>
+                {renderErrorMessage("deposit")}
               </div>
             </div>
             <div className="form-field">

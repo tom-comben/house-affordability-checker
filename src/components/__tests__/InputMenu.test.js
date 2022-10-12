@@ -68,8 +68,8 @@ test("menu button hides and shows input form", async () => {
 test("search button passes the formData to the InputMenu's handleSubmit prop", async () => {
   const mock = jest.fn();
   const expectedInput = {
-    income: "40000",
-    deposit: "20000",
+    income: 40000,
+    deposit: 20000,
     propertyTypes: {
       detached: true,
       semiDetached: true,

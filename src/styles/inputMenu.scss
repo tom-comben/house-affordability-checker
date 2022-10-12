@@ -51,21 +51,40 @@ input-description {
   justify-content: flex-start;
   max-width: 50%;
   &.text-input-wrapper{
-    background-color: base.t(bg-4);
-    max-width: 50%;
-    height: 1.8rem;
+    flex-direction: column;
     line-height: 1.8rem;
-    align-items: center;
-    border: 1px solid #555;
-    &:focus-within{
-      background-color: base.t(bg-5);
-    }
+    align-items: left;
   }
   &.options-wrapper{
     flex-direction: column;
     line-height: 1.8rem;
   }
 }
+
+.text-input {
+  height: 1.8rem;
+  max-width: 100%;
+  line-height: 1.8rem;
+  align-items: center;
+  border: 1px solid #555;
+
+  &.valid {
+    background-color: base.t(bg-4);
+
+    &:focus-within {
+      background-color: base.t(bg-5)
+    }
+  }
+
+  &.invalid {
+    background-color: base.t(invalid-1);
+
+    &:focus-within {
+      background-color: base.t(invalid-2);
+    }
+  }
+}
+
 
 .currency-symbol {
   background-color: rgba(0, 0, 0, 0);
@@ -94,6 +113,14 @@ input-description {
   outline: none;
 }
 
+.error-text {
+  font-size: 0.8rem;
+  line-height: 0.8rem;
+  height: 0.8rem;
+  margin: 0.1rem;
+  text-align: left;
+  color: base.t('error-text');
+}
 
 .option {
   display: flex;
