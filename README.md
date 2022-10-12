@@ -8,7 +8,7 @@ Due to the way the data is currently mocked, changing the property types in the 
 
 TODO:
 
-ADD TESTING!!!
+add more tests
 
 Fix API integration to work with this project (rewrite API to make more usable/flexible)
 
@@ -17,5 +17,7 @@ Once fixed, Find a better way to mock the data/database
 Transfer information window popping up when a region is clicked from the old project
 
 Add advanced search settings for more customised searches (e.g. mortgage parameters and freehold/leasehold)
+
+Improve UI
 
 Think of a better name

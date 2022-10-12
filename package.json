@@ -2,12 +2,12 @@
   "name": "house-affordability-checker",
   "version": "1.0.0",
   "description": "",
-  "main": "lib/server.js",
+  "main": "src/server.js",
   "directories": {
-    "lib": "lib"
+    "src": "src"
   },
   "scripts": {
-    "dev": "set NODE_PATH=./lib&& nodemon --exec babel-node lib/server.js",
+    "dev": "set NODE_PATH=./src&& nodemon --exec babel-node src/server.js",
     "webpack": "webpack -w",
     "test": "jest --watchAll"
   },
@@ -71,7 +71,7 @@
   "jest": {
     "modulePaths": [
       "<rootDir>",
-      "<rootDir>/lib/"
+      "<rootDir>/src/"
     ],
     "moduleNameMapper": {
       "^.+\\.(css|less|scss)$": "babel-jest"

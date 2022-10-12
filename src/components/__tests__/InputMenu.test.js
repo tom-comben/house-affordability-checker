@@ -72,7 +72,7 @@ test("search button passes the formData to the InputMenu's handleSubmit prop", a
     deposit: "20000",
     propertyTypes: {
       detached: true,
-      "semi-detached": true,
+      semiDetached: true,
       terraced: false,
       flat: true,
     },
