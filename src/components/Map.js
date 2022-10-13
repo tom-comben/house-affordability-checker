@@ -35,7 +35,7 @@ const Map = (props) => {
     return;
   };
 
-  // updates the container state and keeps the map the same size when the window is resized
+  // updates the container state when the window is resized
   const windowResized = () => {
     mapTransformer.current.containerResized(ref.current.parentNode);
     setViewbox({ ...mapTransformer.current.viewbox });

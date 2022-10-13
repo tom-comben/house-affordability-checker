@@ -1,6 +1,6 @@
 export default class MapTransformer {
-  #container = {};
-  #map = {};
+  #container = { width: 0, height: 0, offsetTop: 0, offsetleft: 0 };
+  #map = { width: 0, height: 0 };
   #startMapPos = [0, 0];
   #isDragging = false;
   #viewbox = {
@@ -36,24 +36,68 @@ export default class MapTransformer {
     };
   }
 
+  // possibly remove Math.round if it behaves weirdly with scaling
   containerResized(container) {
+    const oldContainer = { ...this.#container };
     this.#setContainer(container);
     const mapAR = this.#map.width / this.#map.height;
-    if (this.containerAR > mapAR) {
-      this.#setViewbox({
-        minX: 0,
-        minY: 0,
-        width: Math.round(this.#map.height * this.containerAR),
-        height: Math.round(this.#map.height),
-      });
+    const newViewbox = { ...this.#viewbox };
+    if (newViewbox.height === 0 || newViewbox.width === 0) {
+      console.log("XXXXXXXX");
+      if (this.containerAR > mapAR) {
+        newViewbox.width = Math.round(this.#map.height * this.containerAR);
+        newViewbox.height = Math.round(this.#map.height);
+        newViewbox.minX = (this.#map.width - newViewbox.width) / 2;
+        newViewbox.minY = 0;
+      } else {
+        newViewbox.width = Math.round(this.#map.width);
+        newViewbox.height = Math.round(this.#map.width / this.containerAR);
+        newViewbox.minX = 0;
+        newViewbox.minY = (this.#map.height - newViewbox.height) / 2;
+      }
     } else {
-      this.#setViewbox({
-        minX: 0,
-        minY: 0,
-        width: Math.round(this.#map.height),
-        height: Math.round(this.#map.height / this.containerAR),
-      });
+      const newWidth =
+        (newViewbox.width * this.#container.width) / oldContainer.width;
+      const newHeight =
+        (newViewbox.height * this.#container.height) / oldContainer.height;
+      if (newWidth > this.#map.width && newHeight > this.#map.height) {
+        if (this.containerAR > mapAR) {
+          newViewbox.width = Math.round(this.#map.height * this.containerAR);
+          newViewbox.height = Math.round(this.#map.height);
+        } else {
+          newViewbox.width = Math.round(this.#map.width);
+          newViewbox.height = Math.round(this.#map.width / this.containerAR);
+        }
+      } else {
+        newViewbox.width = newWidth;
+        newViewbox.height = newHeight;
+      }
+      newViewbox.minX =
+        newViewbox.minX + (this.#viewbox.width - newViewbox.width) / 2;
+      newViewbox.minY =
+        newViewbox.minY + (this.#viewbox.height - newViewbox.height) / 2;
     }
+    this.#setViewbox(newViewbox);
+    // console.log(newViewbox);
+    // if (this.containerAR > mapAR) {
+    //   const viewboxWidth = Math.round(this.#map.height * this.containerAR);
+    //   const minX = (this.#map.width - viewboxWidth) / 2;
+    //   this.#setViewbox({
+    //     minX: minX,
+    //     minY: 0,
+    //     width: viewboxWidth,
+    //     height: Math.round(this.#map.height),
+    //   });
+    // } else {
+    //   const viewboxHeight = Math.round(this.#map.width / this.containerAR);
+    //   const minY = (this.#map.height - viewboxHeight) / 2;
+    //   this.#setViewbox({
+    //     minX: 0,
+    //     minY: minY,
+    //     width: Math.round(this.#map.width),
+    //     height: viewboxHeight,
+    //   });
+    // }
   }
 
   setInitialParams(container) {
@@ -110,7 +154,11 @@ export default class MapTransformer {
     const viewbox = this.#viewbox;
     const map = this.#map;
     const scale = event.deltaY < 0 ? 0.8 : 1.25;
-    if (viewbox.width > map.width && viewbox.height > map.height && scale > 1) {
+    if (
+      viewbox.width > map.width &&
+      viewbox.height >= map.height &&
+      scale >= 1
+    ) {
       return;
     }
     if (viewbox.width < 200 && viewbox.height < 200 && scale < 1) {
