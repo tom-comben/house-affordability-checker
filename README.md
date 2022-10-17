@@ -1,18 +1,14 @@
 WIP
 
-Currently rewriting my Angular project (not on Github) as a React project
-
 Most functionality from the previous project has been transferred over, as well as map zooming/panning
 
-Due to the way the data is currently mocked, changing the property types in the menu has no effect
+If no .env file is present, mock data is used instead of querying the database.
+
+If mock data is used, changing the property types field has no effect due to the way the data is mocked
 
 TODO:
 
 add more tests
-
-Fix API integration to work with this project (rewrite API to make more usable/flexible)
-
-Once fixed, Find a better way to mock the data/database
 
 Transfer information window popping up when a region is clicked from the old project
 

@@ -1,0 +1,564 @@
+{
+  "KNOWSLEY": { "mapCounty": "Merseyside", "mapName": "Knowsley" },
+  "TORBAY": { "mapCounty": "Devon", "mapName": "Torbay" },
+  "BOURNEMOUTH, CHRISTCHURCH AND POOLE": {
+    "mapCounty": "Dorset",
+    "mapName": "Bournemouth, Christchurch and Poole"
+  },
+  "TEWKESBURY": { "mapCounty": "Gloucestershire", "mapName": "Tewkesbury" },
+  "SOUTHAMPTON": { "mapCounty": "Hampshire", "mapName": "Southampton" },
+  "STOCKPORT": { "mapCounty": "Greater Manchester", "mapName": "Stockport" },
+  "ROTHER": { "mapCounty": "East Sussex", "mapName": "Rother" },
+  "NEWCASTLE UPON TYNE": {
+    "mapCounty": "Tyne and Wear",
+    "mapName": "Newcastle upon Tyne"
+  },
+  "WOLVERHAMPTON": { "mapCounty": "West Midlands", "mapName": "Wolverhampton" },
+  "SANDWELL": { "mapCounty": "West Midlands", "mapName": "Sandwell" },
+  "CALDERDALE": { "mapCounty": "West Yorkshire", "mapName": "Calderdale" },
+  "BATH AND NORTH EAST SOMERSET": {
+    "mapCounty": "Somerset",
+    "mapName": "Bath and North East Somerset"
+  },
+  "CITY OF BRISTOL": { "mapCounty": "Bristol", "mapName": "Bristol" },
+  "CITY OF PETERBOROUGH": {
+    "mapCounty": "Cambridgeshire",
+    "mapName": "Peterborough"
+  },
+  "SOUTH CAMBRIDGESHIRE": {
+    "mapCounty": "Cambridgeshire",
+    "mapName": "South Cambridgeshire"
+  },
+  "CHESHIRE WEST AND CHESTER": {
+    "mapCounty": "Cheshire",
+    "mapName": "Cheshire West and Chester"
+  },
+  "CAERPHILLY": { "mapCounty": "Caerphilly", "mapName": "Caerphilly" },
+  "COUNTY DURHAM": { "mapCounty": "Durham", "mapName": "County Durham" },
+  "HAVERING": { "mapCounty": "Greater London", "mapName": "Havering" },
+  "WALTHAM FOREST": {
+    "mapCounty": "Greater London",
+    "mapName": "Waltham Forest"
+  },
+  "THURROCK": { "mapCounty": "Essex", "mapName": "Thurrock" },
+  "EPPING FOREST": { "mapCounty": "Essex", "mapName": "Epping Forest" },
+  "CASTLE POINT": { "mapCounty": "Essex", "mapName": "Castle Point" },
+  "TAMESIDE": { "mapCounty": "Greater Manchester", "mapName": "Tameside" },
+  "COTSWOLD": { "mapCounty": "Gloucestershire", "mapName": "Cotswold" },
+  "HERTSMERE": { "mapCounty": "Hertfordshire", "mapName": "Hertsmere" },
+  "DARTFORD": { "mapCounty": "Kent", "mapName": "Dartford" },
+  "MEDWAY": { "mapCounty": "Kent", "mapName": "Medway" },
+  "THANET": { "mapCounty": "Kent", "mapName": "Thanet" },
+  "MAIDSTONE": { "mapCounty": "Kent", "mapName": "Maidstone" },
+  "ROSSENDALE": { "mapCounty": "Lancashire", "mapName": "Rossendale" },
+  "FYLDE": { "mapCounty": "Lancashire", "mapName": "Fylde" },
+  "SOUTH HOLLAND": { "mapCounty": "Lincolnshire", "mapName": "South Holland" },
+  "GREENWICH": { "mapCounty": "Greater London", "mapName": "Greenwich" },
+  "SEFTON": { "mapCounty": "Merseyside", "mapName": "Sefton" },
+  "NORTH NORFOLK": { "mapCounty": "Norfolk", "mapName": "North Norfolk" },
+  "SOUTH NORFOLK": { "mapCounty": "Norfolk", "mapName": "South Norfolk" },
+  "WEST NORTHAMPTONSHIRE": {
+    "mapCounty": "Northamptonshire",
+    "mapName": "West Northamptonshire"
+  },
+  "NEWARK AND SHERWOOD": {
+    "mapCounty": "Nottinghamshire",
+    "mapName": "Newark and Sherwood"
+  },
+  "VALE OF WHITE HORSE": {
+    "mapCounty": "Oxfordshire",
+    "mapName": "Vale of White Horse"
+  },
+  "STAFFORD": { "mapCounty": "Staffordshire", "mapName": "Stafford" },
+  "KINGSTON UPON THAMES": {
+    "mapCounty": "Greater London",
+    "mapName": "Kingston upon Thames"
+  },
+  "EAST SUFFOLK": { "mapCounty": "Suffolk", "mapName": "East Suffolk" },
+  "SEDGEMOOR": { "mapCounty": "Somerset", "mapName": "Sedgemoor" },
+  "SOMERSET WEST AND TAUNTON": {
+    "mapCounty": "Somerset",
+    "mapName": "Somerset West and Taunton"
+  },
+  "ELMBRIDGE": { "mapCounty": "Surrey", "mapName": "Elmbridge" },
+  "WAVERLEY": { "mapCounty": "Surrey", "mapName": "Waverley" },
+  "SHEFFIELD": { "mapCounty": "South Yorkshire", "mapName": "Sheffield" },
+  "SUNDERLAND": { "mapCounty": "Tyne and Wear", "mapName": "Sunderland" },
+  "NEATH PORT TALBOT": {
+    "mapCounty": "Neath Port Talbot",
+    "mapName": "Neath Port Talbot"
+  },
+  "FLINTSHIRE": { "mapCounty": "Flintshire", "mapName": "Flintshire" },
+  "ISLE OF ANGLESEY": {
+    "mapCounty": "Isle of Anglesey",
+    "mapName": "Isle of Anglesey"
+  },
+  "TORFAEN": { "mapCounty": "Torfaen", "mapName": "Torfaen" },
+  "WREXHAM": { "mapCounty": "Wrexham", "mapName": "Wrexham" },
+  "WARWICK": { "mapCounty": "Warwickshire", "mapName": "Warwick" },
+  "BIRMINGHAM": { "mapCounty": "West Midlands", "mapName": "Birmingham" },
+  "WILTSHIRE": { "mapCounty": "Wiltshire", "mapName": "Wiltshire" },
+  "BRADFORD": { "mapCounty": "West Yorkshire", "mapName": "Bradford" },
+  "NORTH SOMERSET": { "mapCounty": "Somerset", "mapName": "North Somerset" },
+  "WINDSOR AND MAIDENHEAD": {
+    "mapCounty": "Berkshire",
+    "mapName": "Windsor and Maidenhead"
+  },
+  "BUCKINGHAMSHIRE": {
+    "mapCounty": "Buckinghamshire",
+    "mapName": "Buckinghamshire"
+  },
+  "MILTON KEYNES": {
+    "mapCounty": "Buckinghamshire",
+    "mapName": "Milton Keynes"
+  },
+  "HUNTINGDONSHIRE": {
+    "mapCounty": "Cambridgeshire",
+    "mapName": "Huntingdonshire"
+  },
+  "STOCKTON-ON-TEES": { "mapCounty": "Durham", "mapName": "Stockton-on-Tees" },
+  "CHESHIRE EAST": { "mapCounty": "Cheshire", "mapName": "Cheshire East" },
+  "CORNWALL": { "mapCounty": "Cornwall", "mapName": "Cornwall" },
+  "ALLERDALE": { "mapCounty": "Cumbria", "mapName": "Allerdale" },
+  "RHONDDA CYNON TAFF": {
+    "mapCounty": "Rhondda Cynon Taff",
+    "mapName": "Rhondda Cynon Taf"
+  },
+  "CONWY": { "mapCounty": "Conwy", "mapName": "Conwy" },
+  "EAST DEVON": { "mapCounty": "Devon", "mapName": "East Devon" },
+  "NORTH DEVON": { "mapCounty": "Devon", "mapName": "North Devon" },
+  "WEST DEVON": { "mapCounty": "Devon", "mapName": "West Devon" },
+  "CITY OF PLYMOUTH": { "mapCounty": "Devon", "mapName": "Plymouth" },
+  "TEIGNBRIDGE": { "mapCounty": "Devon", "mapName": "Teignbridge" },
+  "DORSET": { "mapCounty": "Dorset", "mapName": "Dorset" },
+  "NORTH EAST DERBYSHIRE": {
+    "mapCounty": "Derbyshire",
+    "mapName": "North East Derbyshire"
+  },
+  "CHESTERFIELD": { "mapCounty": "Derbyshire", "mapName": "Chesterfield" },
+  "CITY OF DERBY": { "mapCounty": "Derbyshire", "mapName": "Derby" },
+  "BOLSOVER": { "mapCounty": "Derbyshire", "mapName": "Bolsover" },
+  "HIGH PEAK": { "mapCounty": "Derbyshire", "mapName": "High Peak" },
+  "EASTBOURNE": { "mapCounty": "East Sussex", "mapName": "Eastbourne" },
+  "LEWES": { "mapCounty": "East Sussex", "mapName": "Lewes" },
+  "WEALDEN": { "mapCounty": "East Sussex", "mapName": "Wealden" },
+  "BASILDON": { "mapCounty": "Essex", "mapName": "Basildon" },
+  "SOUTHEND-ON-SEA": { "mapCounty": "Essex", "mapName": "Southend-on-Sea" },
+  "MALDON": { "mapCounty": "Essex", "mapName": "Maldon" },
+  "TENDRING": { "mapCounty": "Essex", "mapName": "Tendring" },
+  "COLCHESTER": { "mapCounty": "Essex", "mapName": "Colchester" },
+  "WELWYN HATFIELD": {
+    "mapCounty": "Hertfordshire",
+    "mapName": "Welwyn Hatfield"
+  },
+  "DACORUM": { "mapCounty": "Hertfordshire", "mapName": "Dacorum" },
+  "PORTSMOUTH": { "mapCounty": "Hampshire", "mapName": "Portsmouth" },
+  "RUSHMOOR": { "mapCounty": "Hampshire", "mapName": "Rushmoor" },
+  "TEST VALLEY": { "mapCounty": "Hampshire", "mapName": "Test Valley" },
+  "WINCHESTER": { "mapCounty": "Hampshire", "mapName": "Winchester" },
+  "CITY OF KINGSTON UPON HULL": {
+    "mapCounty": "East Riding of Yorkshire",
+    "mapName": "Kingston upon Hull"
+  },
+  "NORTH LINCOLNSHIRE": {
+    "mapCounty": "Lincolnshire",
+    "mapName": "North Lincolnshire"
+  },
+  "ISLE OF WIGHT": { "mapCounty": "Isle of Wight", "mapName": "Isle of Wight" },
+  "CANTERBURY": { "mapCounty": "Kent", "mapName": "Canterbury" },
+  "ASHFORD": { "mapCounty": "Kent", "mapName": "Ashford" },
+  "SWALE": { "mapCounty": "Kent", "mapName": "Swale" },
+  "MANCHESTER": { "mapCounty": "Greater Manchester", "mapName": "Manchester" },
+  "WEST LANCASHIRE": {
+    "mapCounty": "Lancashire",
+    "mapName": "West Lancashire"
+  },
+  "WYRE": { "mapCounty": "Lancashire", "mapName": "Wyre" },
+  "LANCASTER": { "mapCounty": "Lancashire", "mapName": "Lancaster" },
+  "SOUTH KESTEVEN": {
+    "mapCounty": "Lincolnshire",
+    "mapName": "South Kesteven"
+  },
+  "EAST LINDSEY": { "mapCounty": "Lincolnshire", "mapName": "East Lindsey" },
+  "WEST LINDSEY": { "mapCounty": "Lincolnshire", "mapName": "West Lindsey" },
+  "BOSTON": { "mapCounty": "Lincolnshire", "mapName": "Boston" },
+  "CHARNWOOD": { "mapCounty": "Leicestershire", "mapName": "Charnwood" },
+  "HINCKLEY AND BOSWORTH": {
+    "mapCounty": "Leicestershire",
+    "mapName": "Hinckley and Bosworth"
+  },
+  "WIRRAL": { "mapCounty": "Merseyside", "mapName": "Wirral" },
+  "BRENT": { "mapCounty": "Greater London", "mapName": "Brent" },
+  "ENFIELD": { "mapCounty": "Greater London", "mapName": "Enfield" },
+  "NORTHUMBERLAND": {
+    "mapCounty": "Northumberland",
+    "mapName": "Northumberland"
+  },
+  "HARINGEY": { "mapCounty": "Greater London", "mapName": "Haringey" },
+  "ISLINGTON": { "mapCounty": "Greater London", "mapName": "Islington" },
+  "BARKING AND DAGENHAM": {
+    "mapCounty": "Greater London",
+    "mapName": "Barking and Dagenham"
+  },
+  "HAMMERSMITH AND FULHAM": {
+    "mapCounty": "Greater London",
+    "mapName": "Hammersmith and Fulham"
+  },
+  "REDBRIDGE": { "mapCounty": "Greater London", "mapName": "Redbridge" },
+  "GREAT YARMOUTH": { "mapCounty": "Norfolk", "mapName": "Great Yarmouth" },
+  "BROADLAND": { "mapCounty": "Norfolk", "mapName": "Broadland" },
+  "NORWICH": { "mapCounty": "Norfolk", "mapName": "Norwich" },
+  "BRECKLAND": { "mapCounty": "Norfolk", "mapName": "Breckland" },
+  "MANSFIELD": { "mapCounty": "Nottinghamshire", "mapName": "Mansfield" },
+  "ASHFIELD": { "mapCounty": "Nottinghamshire", "mapName": "Ashfield" },
+  "HARROGATE": { "mapCounty": "North Yorkshire", "mapName": "Harrogate" },
+  "CRAVEN": { "mapCounty": "North Yorkshire", "mapName": "Craven" },
+  "RICHMONDSHIRE": {
+    "mapCounty": "North Yorkshire",
+    "mapName": "Richmondshire"
+  },
+  "CHERWELL": { "mapCounty": "Oxfordshire", "mapName": "Cherwell" },
+  "BARNET": { "mapCounty": "Greater London", "mapName": "Barnet" },
+  "TAMWORTH": { "mapCounty": "Staffordshire", "mapName": "Tamworth" },
+  "RICHMOND UPON THAMES": {
+    "mapCounty": "Greater London",
+    "mapName": "Richmond upon Thames"
+  },
+  "BEXLEY": { "mapCounty": "Greater London", "mapName": "Bexley" },
+  "CROYDON": { "mapCounty": "Greater London", "mapName": "Croydon" },
+  "BROMLEY": { "mapCounty": "Greater London", "mapName": "Bromley" },
+  "BABERGH": { "mapCounty": "Suffolk", "mapName": "Babergh" },
+  "IPSWICH": { "mapCounty": "Suffolk", "mapName": "Ipswich" },
+  "MID SUSSEX": { "mapCounty": "West Sussex", "mapName": "Mid Sussex" },
+  "WOKING": { "mapCounty": "Surrey", "mapName": "Woking" },
+  "DONCASTER": { "mapCounty": "South Yorkshire", "mapName": "Doncaster" },
+  "ROTHERHAM": { "mapCounty": "South Yorkshire", "mapName": "Rotherham" },
+  "NORTH TYNESIDE": {
+    "mapCounty": "Tyne and Wear",
+    "mapName": "North Tyneside"
+  },
+  "SOUTH TYNESIDE": {
+    "mapCounty": "Tyne and Wear",
+    "mapName": "South Tyneside"
+  },
+  "MONMOUTHSHIRE": { "mapCounty": "Monmouthshire", "mapName": "Monmouthshire" },
+  "CARDIFF": { "mapCounty": "Cardiff", "mapName": "Cardiff" },
+  "WYCHAVON": { "mapCounty": "Worcestershire", "mapName": "Wychavon" },
+  "SOUTH SOMERSET": { "mapCounty": "Somerset", "mapName": "South Somerset" },
+  "WAKEFIELD": { "mapCounty": "West Yorkshire", "mapName": "Wakefield" },
+  "LEEDS": { "mapCounty": "West Yorkshire", "mapName": "Leeds" },
+  "KIRKLEES": { "mapCounty": "West Yorkshire", "mapName": "Kirklees" },
+  "WANDSWORTH": { "mapCounty": "Greater London", "mapName": "Wandsworth" },
+  "KENSINGTON AND CHELSEA": {
+    "mapCounty": "Greater London",
+    "mapName": "Kensington and Chelsea"
+  },
+  "CAMDEN": { "mapCounty": "Greater London", "mapName": "Camden" },
+  "LAMBETH": { "mapCounty": "Greater London", "mapName": "Lambeth" },
+  "LEWISHAM": { "mapCounty": "Greater London", "mapName": "Lewisham" },
+  "CITY OF WESTMINSTER": {
+    "mapCounty": "Greater London",
+    "mapName": "Westminster"
+  },
+  "CITY OF LONDON": {
+    "mapCounty": "Greater London",
+    "mapName": "City of London"
+  },
+  "HACKNEY": { "mapCounty": "Greater London", "mapName": "Hackney" },
+  "SOUTHWARK": { "mapCounty": "Greater London", "mapName": "Southwark" },
+  "BRENTWOOD": { "mapCounty": "Essex", "mapName": "Brentwood" },
+  "CHELMSFORD": { "mapCounty": "Essex", "mapName": "Chelmsford" },
+  "UTTLESFORD": { "mapCounty": "Essex", "mapName": "Uttlesford" },
+  "ROCHFORD": { "mapCounty": "Essex", "mapName": "Rochford" },
+  "BRAINTREE": { "mapCounty": "Essex", "mapName": "Braintree" },
+  "EALING": { "mapCounty": "Greater London", "mapName": "Ealing" },
+  "HILLINGDON": { "mapCounty": "Greater London", "mapName": "Hillingdon" },
+  "HOUNSLOW": { "mapCounty": "Greater London", "mapName": "Hounslow" },
+  "TOWER HAMLETS": {
+    "mapCounty": "Greater London",
+    "mapName": "Tower Hamlets"
+  },
+  "SOUTH GLOUCESTERSHIRE": {
+    "mapCounty": "Gloucestershire",
+    "mapName": "South Gloucestershire"
+  },
+  "CENTRAL BEDFORDSHIRE": {
+    "mapCounty": "Bedfordshire",
+    "mapName": "Central Bedfordshire"
+  },
+  "LUTON": { "mapCounty": "Bedfordshire", "mapName": "Luton" },
+  "BEDFORD": { "mapCounty": "Bedfordshire", "mapName": "Bedford" },
+  "WEST BERKSHIRE": { "mapCounty": "Berkshire", "mapName": "West Berkshire" },
+  "READING": { "mapCounty": "Berkshire", "mapName": "Reading" },
+  "WOKINGHAM": { "mapCounty": "Berkshire", "mapName": "Wokingham" },
+  "BRACKNELL FOREST": {
+    "mapCounty": "Berkshire",
+    "mapName": "Bracknell Forest"
+  },
+  "SOUTH OXFORDSHIRE": {
+    "mapCounty": "Oxfordshire",
+    "mapName": "South Oxfordshire"
+  },
+  "SLOUGH": { "mapCounty": "Berkshire", "mapName": "Slough" },
+  "CAMBRIDGE": { "mapCounty": "Cambridgeshire", "mapName": "Cambridge" },
+  "FENLAND": { "mapCounty": "Cambridgeshire", "mapName": "Fenland" },
+  "EAST CAMBRIDGESHIRE": {
+    "mapCounty": "Cambridgeshire",
+    "mapName": "East Cambridgeshire"
+  },
+  "REDCAR AND CLEVELAND": {
+    "mapCounty": "North Yorkshire",
+    "mapName": "Redcar and Cleveland"
+  },
+  "MIDDLESBROUGH": { "mapCounty": "Middlesbrough", "mapName": "Middlesbrough" },
+  "HARTLEPOOL": { "mapCounty": "Durham", "mapName": "Hartlepool" },
+  "HALTON": { "mapCounty": "Cheshire", "mapName": "Halton" },
+  "WARRINGTON": { "mapCounty": "Cheshire", "mapName": "Warrington" },
+  "TRAFFORD": { "mapCounty": "Greater Manchester", "mapName": "Trafford" },
+  "ISLES OF SCILLY": {
+    "mapCounty": "Isles of Scilly",
+    "mapName": "Isles of Scilly"
+  },
+  "COPELAND": { "mapCounty": "Cumbria", "mapName": "Copeland" },
+  "EDEN": { "mapCounty": "Cumbria", "mapName": "Eden" },
+  "CARLISLE": { "mapCounty": "Cumbria", "mapName": "Carlisle" },
+  "SOUTH LAKELAND": { "mapCounty": "Cumbria", "mapName": "South Lakeland" },
+  "BARROW-IN-FURNESS": {
+    "mapCounty": "Cumbria",
+    "mapName": "Barrow-in-Furness"
+  },
+  "THE VALE OF GLAMORGAN": {
+    "mapCounty": "The Vale of Glamorgan",
+    "mapName": "Vale of Glamorgan"
+  },
+  "NEWPORT": { "mapCounty": "Newport", "mapName": "Newport" },
+  "PEMBROKESHIRE": { "mapCounty": "Pembrokeshire", "mapName": "Pembrokeshire" },
+  "BRIDGEND": { "mapCounty": "Bridgend", "mapName": "Bridgend" },
+  "BLAENAU GWENT": { "mapCounty": "Blaenau Gwent", "mapName": "Blaenau Gwent" },
+  "CARMARTHENSHIRE": {
+    "mapCounty": "Carmarthenshire",
+    "mapName": "Carmarthenshire"
+  },
+  "GWYNEDD": { "mapCounty": "Gwynedd", "mapName": "Gwynedd" },
+  "CEREDIGION": { "mapCounty": "Ceredigion", "mapName": "Ceredigion" },
+  "POWYS": { "mapCounty": "Powys", "mapName": "Powys" },
+  "DENBIGHSHIRE": { "mapCounty": "Denbighshire", "mapName": "Denbighshire" },
+  "SWANSEA": { "mapCounty": "Swansea", "mapName": "Swansea" },
+  "MERTHYR TYDFIL": {
+    "mapCounty": "Merthyr Tydfil",
+    "mapName": "Merthyr Tydfil"
+  },
+  "SOUTH HAMS": { "mapCounty": "Devon", "mapName": "South Hams" },
+  "EXETER": { "mapCounty": "Devon", "mapName": "Exeter" },
+  "TORRIDGE": { "mapCounty": "Devon", "mapName": "Torridge" },
+  "MID DEVON": { "mapCounty": "Devon", "mapName": "Mid Devon" },
+  "DARLINGTON": { "mapCounty": "Durham", "mapName": "Darlington" },
+  "GATESHEAD": { "mapCounty": "Tyne and Wear", "mapName": "Gateshead" },
+  "DERBYSHIRE DALES": {
+    "mapCounty": "Derbyshire",
+    "mapName": "Derbyshire Dales"
+  },
+  "EREWASH": { "mapCounty": "Derbyshire", "mapName": "Erewash" },
+  "SOUTH DERBYSHIRE": {
+    "mapCounty": "Derbyshire",
+    "mapName": "South Derbyshire"
+  },
+  "AMBER VALLEY": { "mapCounty": "Derbyshire", "mapName": "Amber Valley" },
+  "NEWHAM": { "mapCounty": "Greater London", "mapName": "Newham" },
+  "BRIGHTON AND HOVE": {
+    "mapCounty": "East Sussex",
+    "mapName": "Brighton and Hove"
+  },
+  "HASTINGS": { "mapCounty": "East Sussex", "mapName": "Hastings" },
+  "HARLOW": { "mapCounty": "Essex", "mapName": "Harlow" },
+  "BURY": { "mapCounty": "Greater Manchester", "mapName": "Bury" },
+  "ROCHDALE": { "mapCounty": "Greater Manchester", "mapName": "Rochdale" },
+  "BOLTON": { "mapCounty": "Greater Manchester", "mapName": "Bolton" },
+  "OLDHAM": { "mapCounty": "Greater Manchester", "mapName": "Oldham" },
+  "WIGAN": { "mapCounty": "Greater Manchester", "mapName": "Wigan" },
+  "SALFORD": { "mapCounty": "Greater Manchester", "mapName": "Salford" },
+  "STROUD": { "mapCounty": "Gloucestershire", "mapName": "Stroud" },
+  "CHELTENHAM": { "mapCounty": "Gloucestershire", "mapName": "Cheltenham" },
+  "FOREST OF DEAN": {
+    "mapCounty": "Gloucestershire",
+    "mapName": "Forest of Dean"
+  },
+  "GLOUCESTER": { "mapCounty": "Gloucestershire", "mapName": "Gloucester" },
+  "BROXBOURNE": { "mapCounty": "Hertfordshire", "mapName": "Broxbourne" },
+  "STEVENAGE": { "mapCounty": "Hertfordshire", "mapName": "Stevenage" },
+  "ST ALBANS": { "mapCounty": "Hertfordshire", "mapName": "St Albans" },
+  "THREE RIVERS": { "mapCounty": "Hertfordshire", "mapName": "Three Rivers" },
+  "WATFORD": { "mapCounty": "Hertfordshire", "mapName": "Watford" },
+  "EAST HERTFORDSHIRE": {
+    "mapCounty": "Hertfordshire",
+    "mapName": "East Hertfordshire"
+  },
+  "NORTH HERTFORDSHIRE": {
+    "mapCounty": "Hertfordshire",
+    "mapName": "North Hertfordshire"
+  },
+  "HEREFORDSHIRE": { "mapCounty": "Herefordshire", "mapName": "Herefordshire" },
+  "NEW FOREST": { "mapCounty": "Hampshire", "mapName": "New Forest" },
+  "BASINGSTOKE AND DEANE": {
+    "mapCounty": "Hampshire",
+    "mapName": "Basingstoke and Deane"
+  },
+  "FAREHAM": { "mapCounty": "Hampshire", "mapName": "Fareham" },
+  "EASTLEIGH": { "mapCounty": "Hampshire", "mapName": "Eastleigh" },
+  "HART": { "mapCounty": "Hampshire", "mapName": "Hart" },
+  "HAVANT": { "mapCounty": "Hampshire", "mapName": "Havant" },
+  "GOSPORT": { "mapCounty": "Hampshire", "mapName": "Gosport" },
+  "EAST HAMPSHIRE": { "mapCounty": "Hampshire", "mapName": "East Hampshire" },
+  "EAST RIDING OF YORKSHIRE": {
+    "mapCounty": "East Riding of Yorkshire",
+    "mapName": "East Riding of Yorkshire"
+  },
+  "NORTH EAST LINCOLNSHIRE": {
+    "mapCounty": "Lincolnshire",
+    "mapName": "North East Lincolnshire"
+  },
+  "REDDITCH": { "mapCounty": "Worcestershire", "mapName": "Redditch" },
+  "WORCESTER": { "mapCounty": "Worcestershire", "mapName": "Worcester" },
+  "WYRE FOREST": { "mapCounty": "Worcestershire", "mapName": "Wyre Forest" },
+  "BROMSGROVE": { "mapCounty": "Worcestershire", "mapName": "Bromsgrove" },
+  "MALVERN HILLS": {
+    "mapCounty": "Worcestershire",
+    "mapName": "Malvern Hills"
+  },
+  "FOLKESTONE AND HYTHE": {
+    "mapCounty": "Kent",
+    "mapName": "Folkestone and Hythe"
+  },
+  "DOVER": { "mapCounty": "Kent", "mapName": "Dover" },
+  "TONBRIDGE AND MALLING": {
+    "mapCounty": "Kent",
+    "mapName": "Tonbridge and Malling"
+  },
+  "GRAVESHAM": { "mapCounty": "Kent", "mapName": "Gravesham" },
+  "SEVENOAKS": { "mapCounty": "Kent", "mapName": "Sevenoaks" },
+  "TUNBRIDGE WELLS": { "mapCounty": "Kent", "mapName": "Tunbridge Wells" },
+  "BURNLEY": { "mapCounty": "Lancashire", "mapName": "Burnley" },
+  "BLACKBURN WITH DARWEN": {
+    "mapCounty": "Lancashire",
+    "mapName": "Blackburn with Darwen"
+  },
+  "PRESTON": { "mapCounty": "Lancashire", "mapName": "Preston" },
+  "SOUTH RIBBLE": { "mapCounty": "Lancashire", "mapName": "South Ribble" },
+  "LIVERPOOL": { "mapCounty": "Merseyside", "mapName": "Liverpool" },
+  "ST HELENS": { "mapCounty": "Merseyside", "mapName": "St Helens" },
+  "BLACKPOOL": { "mapCounty": "Lancashire", "mapName": "Blackpool" },
+  "CHORLEY": { "mapCounty": "Lancashire", "mapName": "Chorley" },
+  "HYNDBURN": { "mapCounty": "Lancashire", "mapName": "Hyndburn" },
+  "RIBBLE VALLEY": { "mapCounty": "Lancashire", "mapName": "Ribble Valley" },
+  "PENDLE": { "mapCounty": "Lancashire", "mapName": "Pendle" },
+  "NORTH KESTEVEN": {
+    "mapCounty": "Lincolnshire",
+    "mapName": "North Kesteven"
+  },
+  "LINCOLN": { "mapCounty": "Lincolnshire", "mapName": "Lincoln" },
+  "OADBY AND WIGSTON": {
+    "mapCounty": "Leicestershire",
+    "mapName": "Oadby and Wigston"
+  },
+  "NORTH WEST LEICESTERSHIRE": {
+    "mapCounty": "Leicestershire",
+    "mapName": "North West Leicestershire"
+  },
+  "MELTON": { "mapCounty": "Leicestershire", "mapName": "Melton" },
+  "LEICESTER": { "mapCounty": "Leicestershire", "mapName": "Leicester" },
+  "BLABY": { "mapCounty": "Leicestershire", "mapName": "Blaby" },
+  "RUTLAND": { "mapCounty": "Rutland", "mapName": "Rutland" },
+  "HARBOROUGH": { "mapCounty": "Leicestershire", "mapName": "Harborough" },
+  "DUDLEY": { "mapCounty": "West Midlands", "mapName": "Dudley" },
+  "WALSALL": { "mapCounty": "West Midlands", "mapName": "Walsall" },
+  "COVENTRY": { "mapCounty": "West Midlands", "mapName": "Coventry" },
+  "SOLIHULL": { "mapCounty": "West Midlands", "mapName": "Solihull" },
+  "HARROW": { "mapCounty": "Greater London", "mapName": "Harrow" },
+  "SPELTHORNE": { "mapCounty": "Surrey", "mapName": "Spelthorne" },
+  "KING'S LYNN AND WEST NORFOLK": {
+    "mapCounty": "Norfolk",
+    "mapName": "King's Lynn and West Norfolk"
+  },
+  "NORTH NORTHAMPTONSHIRE": {
+    "mapCounty": "Northamptonshire",
+    "mapName": "North Northamptonshire"
+  },
+  "CITY OF NOTTINGHAM": {
+    "mapCounty": "Nottinghamshire",
+    "mapName": "Nottingham"
+  },
+  "RUSHCLIFFE": { "mapCounty": "Nottinghamshire", "mapName": "Rushcliffe" },
+  "BROXTOWE": { "mapCounty": "Nottinghamshire", "mapName": "Broxtowe" },
+  "GEDLING": { "mapCounty": "Nottinghamshire", "mapName": "Gedling" },
+  "BASSETLAW": { "mapCounty": "Nottinghamshire", "mapName": "Bassetlaw" },
+  "RYEDALE": { "mapCounty": "North Yorkshire", "mapName": "Ryedale" },
+  "SCARBOROUGH": { "mapCounty": "North Yorkshire", "mapName": "Scarborough" },
+  "YORK": { "mapCounty": "North Yorkshire", "mapName": "York" },
+  "HAMBLETON": { "mapCounty": "North Yorkshire", "mapName": "Hambleton" },
+  "SELBY": { "mapCounty": "North Yorkshire", "mapName": "Selby" },
+  "WEST OXFORDSHIRE": {
+    "mapCounty": "Oxfordshire",
+    "mapName": "West Oxfordshire"
+  },
+  "OXFORD": { "mapCounty": "Oxfordshire", "mapName": "Oxford" },
+  "MERTON": { "mapCounty": "Greater London", "mapName": "Merton" },
+  "SUTTON": { "mapCounty": "Greater London", "mapName": "Sutton" },
+  "HORSHAM": { "mapCounty": "West Sussex", "mapName": "Horsham" },
+  "WREKIN": { "mapCounty": "Shropshire", "mapName": "Telford and Wrekin" },
+  "TANDRIDGE": { "mapCounty": "Surrey", "mapName": "Tandridge" },
+  "WORTHING": { "mapCounty": "West Sussex", "mapName": "Worthing" },
+  "STOKE-ON-TRENT": {
+    "mapCounty": "Staffordshire",
+    "mapName": "Stoke-on-Trent"
+  },
+  "EAST STAFFORDSHIRE": {
+    "mapCounty": "Staffordshire",
+    "mapName": "East Staffordshire"
+  },
+  "SOUTH STAFFORDSHIRE": {
+    "mapCounty": "Staffordshire",
+    "mapName": "South Staffordshire"
+  },
+  "NEWCASTLE-UNDER-LYME": {
+    "mapCounty": "Staffordshire",
+    "mapName": "Newcastle-under-Lyme"
+  },
+  "STAFFORDSHIRE MOORLANDS": {
+    "mapCounty": "Staffordshire",
+    "mapName": "Staffordshire Moorlands"
+  },
+  "CANNOCK CHASE": { "mapCounty": "Staffordshire", "mapName": "Cannock Chase" },
+  "LICHFIELD": { "mapCounty": "Staffordshire", "mapName": "Lichfield" },
+  "SHROPSHIRE": { "mapCounty": "Shropshire", "mapName": "Shropshire" },
+  "MID SUFFOLK": { "mapCounty": "Suffolk", "mapName": "Mid Suffolk" },
+  "WEST SUFFOLK": { "mapCounty": "Suffolk", "mapName": "West Suffolk" },
+  "MENDIP": { "mapCounty": "Somerset", "mapName": "Mendip" },
+  "ARUN": { "mapCounty": "West Sussex", "mapName": "Arun" },
+  "ADUR": { "mapCounty": "West Sussex", "mapName": "Adur" },
+  "CHICHESTER": { "mapCounty": "West Sussex", "mapName": "Chichester" },
+  "CRAWLEY": { "mapCounty": "West Sussex", "mapName": "Crawley" },
+  "MOLE VALLEY": { "mapCounty": "Surrey", "mapName": "Mole Valley" },
+  "RUNNYMEDE": { "mapCounty": "Surrey", "mapName": "Runnymede" },
+  "EPSOM AND EWELL": { "mapCounty": "Surrey", "mapName": "Epsom and Ewell" },
+  "REIGATE AND BANSTEAD": {
+    "mapCounty": "Surrey",
+    "mapName": "Reigate and Banstead"
+  },
+  "GUILDFORD": { "mapCounty": "Surrey", "mapName": "Guildford" },
+  "SURREY HEATH": { "mapCounty": "Surrey", "mapName": "Surrey Heath" },
+  "BARNSLEY": { "mapCounty": "South Yorkshire", "mapName": "Barnsley" },
+  "RUGBY": { "mapCounty": "Warwickshire", "mapName": "Rugby" },
+  "STRATFORD-ON-AVON": {
+    "mapCounty": "Warwickshire",
+    "mapName": "Stratford-on-Avon"
+  },
+  "NUNEATON AND BEDWORTH": {
+    "mapCounty": "Warwickshire",
+    "mapName": "Nuneaton and Bedworth"
+  },
+  "NORTH WARWICKSHIRE": {
+    "mapCounty": "Warwickshire",
+    "mapName": "North Warwickshire"
+  },
+  "SWINDON": { "mapCounty": "Wiltshire", "mapName": "Swindon" }
+}

@@ -7,7 +7,7 @@ import MapTransformer from "utils/MapTransformer";
 import "styles/map.scss";
 
 const Map = (props) => {
-  const [maps] = useState({ counties: countiesMap, districts: districtsMap });
+  const [maps] = useState({ county: countiesMap, district: districtsMap });
   const ref = useRef(null);
   const mapTransformer = useRef(new MapTransformer(maps[props.regionSize]));
   const [viewbox, setViewbox] = useState({

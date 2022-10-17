@@ -36,14 +36,12 @@ export default class MapTransformer {
     };
   }
 
-  // possibly remove Math.round if it behaves weirdly with scaling
   containerResized(container) {
     const oldContainer = { ...this.#container };
     this.#setContainer(container);
     const mapAR = this.#map.width / this.#map.height;
     const newViewbox = { ...this.#viewbox };
     if (newViewbox.height === 0 || newViewbox.width === 0) {
-      console.log("XXXXXXXX");
       if (this.containerAR > mapAR) {
         newViewbox.width = Math.round(this.#map.height * this.containerAR);
         newViewbox.height = Math.round(this.#map.height);
@@ -78,26 +76,6 @@ export default class MapTransformer {
         newViewbox.minY + (this.#viewbox.height - newViewbox.height) / 2;
     }
     this.#setViewbox(newViewbox);
-    // console.log(newViewbox);
-    // if (this.containerAR > mapAR) {
-    //   const viewboxWidth = Math.round(this.#map.height * this.containerAR);
-    //   const minX = (this.#map.width - viewboxWidth) / 2;
-    //   this.#setViewbox({
-    //     minX: minX,
-    //     minY: 0,
-    //     width: viewboxWidth,
-    //     height: Math.round(this.#map.height),
-    //   });
-    // } else {
-    //   const viewboxHeight = Math.round(this.#map.width / this.containerAR);
-    //   const minY = (this.#map.height - viewboxHeight) / 2;
-    //   this.#setViewbox({
-    //     minX: 0,
-    //     minY: minY,
-    //     width: Math.round(this.#map.width),
-    //     height: viewboxHeight,
-    //   });
-    // }
   }
 
   setInitialParams(container) {

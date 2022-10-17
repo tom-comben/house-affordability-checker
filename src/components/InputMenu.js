@@ -11,7 +11,7 @@ const InputMenu = (props) => {
     terraced: true,
     flat: true,
   });
-  const [regionSize, setRegionSize] = useState("counties");
+  const [regionSize, setRegionSize] = useState("county");
   const [isValidInput, setIsValidInput] = useState({
     income: "valid",
     deposit: "valid",
@@ -76,11 +76,13 @@ const InputMenu = (props) => {
     // removes commas from the strings
     const incomeClean = income.replace(/\..*|[^\d]/g, "");
     const depositClean = deposit.replace(/\..*|[^\d]/g, "");
-
+    const propertyTypesArr = Object.keys(propertyTypes)
+      .filter((key) => propertyTypes[key])
+      .map((item) => item.substring(0, 1).toUpperCase());
     props.handleSubmit({
       income: parseInt(incomeClean),
       deposit: parseInt(depositClean),
-      propertyTypes,
+      propertyTypes: propertyTypesArr,
       regionSize,
     });
   };
@@ -233,9 +235,9 @@ const InputMenu = (props) => {
                 <div className="option">
                   <input
                     type="radio"
-                    id="counties"
+                    id="county"
                     name="regionSize"
-                    checked={regionSize === "counties"}
+                    checked={regionSize === "county"}
                     onChange={handleChange}
                   />
                   <label htmlFor="counties">Counties</label>
@@ -243,9 +245,9 @@ const InputMenu = (props) => {
                 <div className="option">
                   <input
                     type="radio"
-                    id="districts"
+                    id="district"
                     name="regionSize"
-                    checked={regionSize === "districts"}
+                    checked={regionSize === "district"}
                     onChange={handleChange}
                   />
                   <label htmlFor="districts">Districts</label>

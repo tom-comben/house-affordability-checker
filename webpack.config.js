@@ -1,4 +1,5 @@
 const path = require("path");
+const dotEnv = require("dotenv-webpack");
 
 module.exports = {
   resolve: {
@@ -10,6 +11,7 @@ module.exports = {
     path: path.resolve(__dirname, "public"),
     filename: "bundle.js",
   },
+  plugins: [new dotEnv()],
   module: {
     rules: [
       { test: /\.js$/, exclude: /node_modules/, use: "babel-loader" },
