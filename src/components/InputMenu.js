@@ -240,7 +240,7 @@ const InputMenu = (props) => {
                     checked={regionSize === "county"}
                     onChange={handleChange}
                   />
-                  <label htmlFor="counties">Counties</label>
+                  <label htmlFor="county">Counties</label>
                 </div>
                 <div className="option">
                   <input
@@ -250,7 +250,7 @@ const InputMenu = (props) => {
                     checked={regionSize === "district"}
                     onChange={handleChange}
                   />
-                  <label htmlFor="districts">Districts</label>
+                  <label htmlFor="district">Districts</label>
                 </div>
               </div>
             </div>

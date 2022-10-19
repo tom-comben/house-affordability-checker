@@ -14,8 +14,8 @@ test("renders all input fields with correct labels", () => {
   expect(screen.getByLabelText("Semi-Detached").id).toBe("semiDetached");
   expect(screen.getByLabelText("Terraced").id).toBe("terraced");
   expect(screen.getByLabelText("Flat").id).toBe("flat");
-  expect(screen.getByLabelText("Counties").id).toBe("counties");
-  expect(screen.getByLabelText("Districts").id).toBe("districts");
+  expect(screen.getByLabelText("Counties").id).toBe("county");
+  expect(screen.getByLabelText("Districts").id).toBe("district");
 });
 
 test("assigns correct label to input groups", () => {
@@ -70,13 +70,8 @@ test("search button passes the formData to the InputMenu's handleSubmit prop", a
   const expectedInput = {
     income: 40000,
     deposit: 20000,
-    propertyTypes: {
-      detached: true,
-      semiDetached: true,
-      terraced: false,
-      flat: true,
-    },
-    regionSize: "districts",
+    propertyTypes: ["D", "S", "F"],
+    regionSize: "district",
   };
   render(<InputMenu handleSubmit={mock} />);
   const incomeInput = screen.getByRole("textbox", { name: "Income" });
