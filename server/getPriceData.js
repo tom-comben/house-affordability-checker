@@ -20,7 +20,7 @@ module.exports = function getPriceData(searchData) {
         return getDistinctRegions(connection, searchData.regionSize);
       })
       .catch((err) => {
-        console.error(err);
+        reject(err);
       })
       .then((regions) => {
         return getRegionData(
@@ -32,22 +32,20 @@ module.exports = function getPriceData(searchData) {
         );
       })
       .catch((err) => {
-        console.error(err);
+        reject(err);
       })
       .then((regionData) => {
         return getDataSummary(searchData, regionData);
       })
       .catch((err) => {
-        console.error(err);
+        reject(err);
       })
       .then((dataSummary) => {
-        if (searchData.regionSize == "county") {
-        }
         connection.end;
         resolve(dataSummary);
       })
       .catch((err) => {
-        console.error(err);
+        reject(err);
       });
   });
 };
@@ -70,7 +68,7 @@ async function getDistinctRegions(
         }
       }
     );
-  }).catch((err) => console.error(err));
+  }).catch((err) => reject(err));
 }
 
 async function getRegionData(
@@ -112,7 +110,7 @@ async function getRegionData(
           newBuild,
         ];
         connection.query(sqlQuery, sqlValues, (err, result) => {
-          if (err) console.error(err);
+          if (err) reject(err);
           else {
             if (regionSize === "county" && searchSize === "county") {
               regionData[counties[region].mapName] = result.reduce(
@@ -144,11 +142,20 @@ async function getRegionData(
             resolve();
           }
         });
-      }).catch((err) => console.error(err))
+      }).catch((err) => {
+        throw err;
+      })
     );
   }
-  await Promise.all(promises);
-  return regionData;
+  return new Promise((resolve, reject) => {
+    Promise.all(promises)
+      .catch((err) => {
+        reject(err);
+      })
+      .then(() => {
+        resolve(regionData);
+      });
+  });
 }
 
 function initialiseRegionData(searchData, counties, districts) {
@@ -206,14 +213,19 @@ async function getDataSummary(searchData, regionData) {
           dataSummary[region][propertyType]["max"] = max;
           dataSummary[region][propertyType]["outliers"] = outliers;
           resolve();
-        }).catch((err) => console.error(err))
+        }).catch((err) => reject(err))
       );
     }
   }
-  await Promise.all(promises).catch((err) => {
-    console.error(err);
+  return new Promise((resolve, reject) => {
+    Promise.all(promises)
+      .catch((err) => {
+        reject(err);
+      })
+      .then(() => {
+        resolve(dataSummary);
+      });
   });
-  return dataSummary;
 }
 
 function getQuartiles(arr) {

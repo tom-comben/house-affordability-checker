@@ -17,11 +17,16 @@ const App = () => {
       propertyTypes: formData.propertyTypes,
       duration: { house: ["F"], flat: ["F", "L"] },
     };
-    api.getPriceData(searchData).then((priceData) => {
-      setPriceData(priceData);
-      setMaxBudget(budget.max);
-      setRegionSize(formData.regionSize);
-    });
+    api
+      .getPriceData(searchData)
+      .then((priceData) => {
+        setPriceData(priceData);
+        setMaxBudget(budget.max);
+        setRegionSize(formData.regionSize);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   // return maximum property price and whether it's capped by income or deposit

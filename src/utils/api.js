@@ -8,22 +8,35 @@ const getPriceData = (searchData) => {
         method: "post",
         headers: {
           "Content-Type": "application/json",
-          Accept: "application/json",
         },
         body: JSON.stringify(searchData),
       })
         .then((res) => {
-          resolve(res.json());
+          if (res.status != 200) {
+            reject(res);
+          }
+          return res.json();
+        })
+        .then((data) => {
+          resolve(data);
         })
         .catch((err) => {
           reject(err);
         });
     } else {
-      const priceData =
-        searchData.regionSize === "county" ? countyMockData : districtMockData;
-      resolve(priceData);
+      try {
+        resolve(getMockData(searchData));
+      } catch (err) {
+        reject(err);
+      }
     }
   });
+};
+
+const getMockData = (searchData) => {
+  const priceData =
+    searchData.regionSize === "county" ? countyMockData : districtMockData;
+  return priceData;
 };
 
 export default { getPriceData };
