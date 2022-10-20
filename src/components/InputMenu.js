@@ -71,7 +71,6 @@ const InputMenu = (props) => {
     const propertyTypesArr = Object.keys(propertyTypes)
       .filter((key) => propertyTypes[key])
       .map((item) => item.substring(0, 1).toUpperCase());
-    console.log("propTypesArr:", propertyTypesArr);
     event.preventDefault();
     if (validateForm(propertyTypesArr) === false) {
       return;
