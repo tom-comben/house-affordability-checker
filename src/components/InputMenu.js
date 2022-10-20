@@ -15,6 +15,8 @@ const InputMenu = (props) => {
   const [isValidInput, setIsValidInput] = useState({
     income: "valid",
     deposit: "valid",
+    propertyTypes: "valid",
+    regionSize: "valid",
   });
 
   const toggleMenu = () => {
@@ -41,17 +43,12 @@ const InputMenu = (props) => {
         const propertyTypesValue = {};
         propertyTypesValue[event.target.id] = !propertyTypes[event.target.id];
         const newTypes = { ...propertyTypes, ...propertyTypesValue };
-        console.log(newTypes);
-        if (
-          newTypes.detached ||
-          newTypes.semiDetached ||
-          newTypes.terraced ||
-          newTypes.flat
-        ) {
-          setPropertyTypes({ ...propertyTypes, ...propertyTypesValue });
-        }
+        setIsValidInput({ ...isValidInput, propertyTypes: "valid" });
+        setPropertyTypes({ ...propertyTypes, ...propertyTypesValue });
+
         break;
       case "regionSize":
+        setIsValidInput({ ...isValidInput, regionSize: "valid" });
         setRegionSize(event.target.id);
         break;
       default:
@@ -63,22 +60,23 @@ const InputMenu = (props) => {
   const handleUserInput = (event) => {
     // removes non-numeric chracters and any characters after a decimal
     const valueClean = event.target.value.replace(/\..*|[^\d]/g, "");
-    // add commas to numeric string
+    // adds commas to numeric string
     const newValue = valueClean.replace(/\d{1,3}(?=(\d{3})+(?!\d))/g, "$&,");
     return newValue;
   };
 
   const handleSubmit = (event) => {
-    event.preventDefault();
-    if (checkFormFields() === false) {
-      return;
-    }
-    // removes commas from the strings
     const incomeClean = income.replace(/\..*|[^\d]/g, "");
     const depositClean = deposit.replace(/\..*|[^\d]/g, "");
     const propertyTypesArr = Object.keys(propertyTypes)
       .filter((key) => propertyTypes[key])
       .map((item) => item.substring(0, 1).toUpperCase());
+    console.log("propTypesArr:", propertyTypesArr);
+    event.preventDefault();
+    if (validateForm(propertyTypesArr) === false) {
+      return;
+    }
+    // removes non-numeric characters from the strings
     props.handleSubmit({
       income: parseInt(incomeClean),
       deposit: parseInt(depositClean),
@@ -87,11 +85,24 @@ const InputMenu = (props) => {
     });
   };
 
-  const checkFormFields = () => {
-    const incomeValid = income.length === 0 ? "invalid" : "valid";
-    const depositValid = deposit.length === 0 ? "invalid" : "valid";
-    if (incomeValid === "invalid" || depositValid === "invalid") {
-      setIsValidInput({ income: incomeValid, deposit: depositValid });
+  const validateForm = (propertyTypesArr) => {
+    const invalidInputs = {};
+    const incomeClean = income.replace(/\,/g, "");
+    const depositClean = deposit.replace(/\,/g, "");
+    if (isNaN(incomeClean) || incomeClean.length === 0) {
+      invalidInputs.income = "invalid";
+    }
+    if (isNaN(depositClean) || depositClean.length === 0) {
+      invalidInputs.deposit = "invalid";
+    }
+    if (propertyTypesArr.length === 0) {
+      invalidInputs.propertyTypes = "invalid";
+    }
+    if (Object.keys(invalidInputs).length > 0) {
+      setIsValidInput({
+        ...isValidInput,
+        ...invalidInputs,
+      });
       return false;
     }
     return true;
@@ -100,12 +111,19 @@ const InputMenu = (props) => {
   const renderErrorMessage = (field) => {
     let message = "";
     if (isValidInput[field] === "invalid") {
+      console.log("field:", field);
       switch (field) {
         case "income":
-          message = "Please enter an income";
+          message = "Please enter a valid income";
           break;
         case "deposit":
-          message = "Please enter a deposit";
+          message = "Please enter a valid deposit";
+          break;
+        case "propertyTypes":
+          message = "Please select a property type";
+          break;
+        case "regionSize":
+          message = "How can this be invalid?";
           break;
         default:
           message = "Unknown input field";
@@ -139,7 +157,6 @@ const InputMenu = (props) => {
                     value={income}
                     name="income"
                     type="text"
-                    pattern="^\d+(,?\d{3})*(\d{3})*$"
                   />
                 </div>
                 {renderErrorMessage("income")}
@@ -164,7 +181,6 @@ const InputMenu = (props) => {
                     value={deposit}
                     name="deposit"
                     type="text"
-                    pattern="^\d+(,?\d{3})*(\d{3})*$"
                   />
                 </div>
                 {renderErrorMessage("deposit")}
@@ -220,6 +236,7 @@ const InputMenu = (props) => {
                   />
                   <label htmlFor="flat">Flat</label>
                 </div>
+                {renderErrorMessage("propertyTypes")}
               </div>
             </div>
             <div className="form-field">
@@ -252,6 +269,7 @@ const InputMenu = (props) => {
                   />
                   <label htmlFor="district">Districts</label>
                 </div>
+                {renderErrorMessage("regionSize")}
               </div>
             </div>
             <div className="btn-wrapper">
